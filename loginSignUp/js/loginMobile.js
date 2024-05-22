@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function sendMatchResult(isMatch) {
         console.log('Sending match result to server:', isMatch);
-        ws.send(JSON.stringify({ type: 'loginVerification', isMatch: isMatch }));
+        ws.send(JSON.stringify(isMatch));
     }
 
     function handleLoginResponse(isMatch) {
